@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css " />
+    <title>App</title>
+    <meta name="mobile-web-app-capable" content="yes" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <button class="button" type="button" onclick="cargarDatos()">
+        Mostrar Hoteles
+      </button>
+      <button class="buttonPromedio" type="button" onclick="promedio()">
+        Promedio
+      </button>
+      <button class="buttonMax" type="button" onclick="max()">
+        De Mayor a Menor
+      </button>
+      <button class="buttonPalindromo" type="button" onclick="palindromo()">
+        Palindromo
+      </button>
+      <button class="cls" type="button" onclick="cleanView()">Limpiar</button>
+    </div>
+    <div class="container" id="container">
+      <div id="hotels"><table id="table"></table></div>
+      <div id="alumnos">
+        <table id="tableAlumnos"></table>
+        <h3 id="result"></h3>
+      </div>
+
+      <div id="mayor">
+        <table id="tablePost"></table>
+      </div>
+      <div id="pal">
+        <form
+          id="myForm"
+          onsubmit="document.getElementById('submit').disabled = true
+          ; validarPalindromo()"
+          onclick="document.getElementById('submit').disabled = false
+        ;"
+        >
+          <input
+            type="text"
+            id="txt"
+            placeholder="Ingresa una palabra"
+            pattern="[a-zA-Z ]+"
+            required
+          />
+          <div class="palindromo">
+            <button class="buttonPal" id="submit" type="submit">Validar</button>
+            <p id="isPal">Es un palindromo</p>
+            <p id="notPal">No es un palindromo</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script src="js/main.js"></script>
+</html>
